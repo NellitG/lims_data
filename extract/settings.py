@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'machakos',
     'bungoma',
     'kajiado',
+    'uasingishu',
 ]
 
 MIDDLEWARE = [
