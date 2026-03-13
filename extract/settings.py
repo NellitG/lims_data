@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'meru',
     'makueni',
     'kwale',
+    'kitui',
 ]
 
 MIDDLEWARE = [
