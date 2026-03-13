@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'kitui',
     'kirinyaga',
     'kilifi',
+    'embu',
 ]
 
 MIDDLEWARE = [
