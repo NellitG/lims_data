@@ -1,6 +1,6 @@
 import json
 from django.core.management.base import BaseCommand
-from muranga.models import SoilSample
+from meru.models import SoilSample
 from datetime import datetime
 
 
@@ -10,7 +10,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         try:
             # Open and load JSON file
-            with open(r"E:\Projects\Soil Samples Data\Samples json\murangadata.json", 'r', encoding='utf-8') as f:
+            with open(r"E:\Projects\Soil Samples Data\Samples json\merudata.json", 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
             self.stdout.write(f"Found {len(data)} records to process...")
