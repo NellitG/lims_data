@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'transnzoia',
     'tharaka',
     'nyeri',
+    'muranga',
 ]
 
 MIDDLEWARE = [
