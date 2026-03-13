@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'muranga',
     'meru',
     'makueni',
+    'kwale',
 ]
 
 MIDDLEWARE = [
