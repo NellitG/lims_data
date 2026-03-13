@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'kajiado',
     'uasingishu',
     'transnzoia',
+    'tharaka',
 ]
 
 MIDDLEWARE = [
