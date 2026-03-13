@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'kwale',
     'kitui',
     'kirinyaga',
+    'kilifi',
 ]
 
 MIDDLEWARE = [
