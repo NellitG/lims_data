@@ -39,10 +39,10 @@ class Command(BaseCommand):
                         )
                         warning_count += 1
 
-                    # Get sample_id - this is required by model (no null=True)
+                    # Get sample_id
                     sample_id = record.get("Provide the ID of the designated sampling point (SP-ID).1")
                     
-                    # If no sample_id, create a placeholder
+                    # If no sample_id
                     if not sample_id:
                         sample_id = f"UNKNOWN-{index:03d}"
                         self.stdout.write(
@@ -66,11 +66,11 @@ class Command(BaseCommand):
                     # Get all fields with null values allowed
                     
                     # Client information
-                    client_name = record.get("client_name")  # Adjust field name as per your JSON
+                    client_name = record.get("client_name")  
                     if client_name == "":
                         client_name = None
                     
-                    client_phone = record.get("client_phone")  # Adjust field name as per your JSON
+                    client_phone = record.get("client_phone")  
                     if client_phone == "":
                         client_phone = None
                     
@@ -79,11 +79,11 @@ class Command(BaseCommand):
                     if town == "":
                         town = None
                     
-                    county = record.get("county")  # Adjust field name as per your JSON
+                    county = record.get("county")  
                     if county == "":
                         county = None
                     
-                    sub_county = record.get("sub_county")  # Adjust field name as per your JSON
+                    sub_county = record.get("sub_county")  
                     if sub_county == "":
                         sub_county = None
                     
@@ -117,15 +117,15 @@ class Command(BaseCommand):
                         altitude = None
                     
                     # Crop information
-                    previous_crop = record.get("previous_crop")  # Adjust field name as per your JSON
+                    previous_crop = record.get("previous_crop")  
                     if previous_crop == "":
                         previous_crop = None
                     
-                    next_crop = record.get("next_crop")  # Adjust field name as per your JSON
+                    next_crop = record.get("next_crop")  
                     if next_crop == "":
                         next_crop = None
                     
-                    # Create SoilSample record - all null values will be saved as NULL in database
+                    # Create SoilSample record
                     soil_sample = SoilSample.objects.create(
                         # Client information
                         client_name=client_name,
@@ -150,7 +150,7 @@ class Command(BaseCommand):
                         
                         # Date and test info
                         date_sample_received=date_received,
-                        test_required="Soil Test"  # Default value
+                        test_required="Soil Test"
                     )
                     
                     success_count += 1
