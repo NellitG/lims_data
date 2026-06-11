@@ -10,7 +10,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
 
-        with open(r"E:\Projects\Soil Samples Data\Samples json\machakosdata.json") as f:
+        with open(r"D:\Projects\Soil Samples Data\Samples json\machakosdata.json") as f:
             data = json.load(f)
 
         for record in data:
